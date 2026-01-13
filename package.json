@@ -1,0 +1,17 @@
+{
+  "name": "isaac-sim-web-dashboard",
+  "version": "1.0.0",
+  "description": "Monorepo for Isaac Sim ROS 2 web dashboard",
+  "private": true,
+  "scripts": {
+    "dev:frontend": "pnpm --filter frontend dev",
+    "dev:backend": "pnpm --filter backend dev",
+    "dev": "pnpm run dev:frontend & pnpm run dev:backend",
+    "build": "pnpm --filter frontend build && pnpm --filter backend build",
+    "type-check": "pnpm --filter frontend type-check && pnpm --filter backend type-check"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.5",
+    "typescript": "^5.3.3"
+  }
+}

@@ -1,0 +1,30 @@
+.node_modules
+node_modules/
+dist/
+build/
+.DS_Store
+*.log
+.env
+.env.local
+.cache
+.pnpm-debug.log
+pnpm-lock.yaml
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Vite
+.vite
+
+# Build artifacts
+apps/*/dist
+apps/*/build
+packages/*/dist
