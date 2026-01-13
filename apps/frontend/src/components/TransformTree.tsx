@@ -92,7 +92,6 @@ export function TransformTree({ ros, connectionStatus }: TransformTreeProps) {
             style={{
               maxHeight: "400px",
               overflowY: "auto",
-              backgroundColor: "#f5f5f5",
               borderRadius: "4px",
               padding: "0.5rem 0",
             }}
@@ -104,7 +103,7 @@ export function TransformTree({ ros, connectionStatus }: TransformTreeProps) {
                   borderBottom: "1px solid #ddd",
                   padding: "0.75rem",
                   backgroundColor: expandedTransforms.has(index)
-                    ? "#fff"
+                    ? "#1e3d81"
                     : "transparent",
                 }}
               >
@@ -120,12 +119,12 @@ export function TransformTree({ ros, connectionStatus }: TransformTreeProps) {
                 >
                   <div>
                     <strong>{tf.child_frame_id}</strong>
-                    <span style={{ color: "#999", fontSize: "0.9rem" }}>
+                    <span style={{ color: "white", fontSize: "0.9rem" }}>
                       {" "}
                       ← {tf.parent_frame_id}
                     </span>
                   </div>
-                  <span style={{ color: "#666" }}>
+                  <span style={{ color: "white" }}>
                     {expandedTransforms.has(index) ? "▼" : "▶"}
                   </span>
                 </div>
@@ -141,7 +140,7 @@ export function TransformTree({ ros, connectionStatus }: TransformTreeProps) {
                   >
                     <div style={{ marginBottom: "0.5rem" }}>
                       <strong>Translation:</strong>
-                      <div style={{ color: "#666", marginLeft: "0.5rem" }}>
+                      <div style={{ color: "white", marginLeft: "0.5rem" }}>
                         X: {tf.translation.x.toFixed(4)} m<br />
                         Y: {tf.translation.y.toFixed(4)} m<br />
                         Z: {tf.translation.z.toFixed(4)} m
@@ -149,7 +148,7 @@ export function TransformTree({ ros, connectionStatus }: TransformTreeProps) {
                     </div>
                     <div>
                       <strong>Rotation (Quaternion):</strong>
-                      <div style={{ color: "#666", marginLeft: "0.5rem" }}>
+                      <div style={{ color: "white", marginLeft: "0.5rem" }}>
                         X: {tf.rotation.x.toFixed(4)}
                         <br />
                         Y: {tf.rotation.y.toFixed(4)}

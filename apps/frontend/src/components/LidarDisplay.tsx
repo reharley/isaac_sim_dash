@@ -113,7 +113,6 @@ export function LidarDisplay({ ros, connectionStatus }: LidarDisplayProps) {
             </h3>
             <div
               style={{
-                backgroundColor: "#f5f5f5",
                 padding: "0.75rem",
                 borderRadius: "4px",
                 fontSize: "0.9rem",
@@ -127,7 +126,6 @@ export function LidarDisplay({ ros, connectionStatus }: LidarDisplayProps) {
                     <span
                       key={idx}
                       style={{
-                        backgroundColor: "#e3f2fd",
                         padding: "0.25rem 0.5rem",
                         borderRadius: "3px",
                         color: "#1976d2",
@@ -168,7 +166,6 @@ export function LidarDisplay({ ros, connectionStatus }: LidarDisplayProps) {
           <div
             style={{
               padding: "0.75rem",
-              backgroundColor: "#f0f0f0",
               borderRadius: "4px",
               fontSize: "0.85rem",
               color: "#666",
@@ -182,7 +179,6 @@ export function LidarDisplay({ ros, connectionStatus }: LidarDisplayProps) {
               style={{
                 marginTop: "1rem",
                 padding: "0.5rem",
-                backgroundColor: "#e8f5e9",
                 borderRadius: "4px",
                 fontSize: "0.85rem",
                 color: "#2e7d32",

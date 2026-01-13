@@ -143,7 +143,6 @@ export function IMUDisplay({ ros, connectionStatus }: IMUDisplayProps) {
               style={{
                 marginTop: "1rem",
                 padding: "0.5rem",
-                backgroundColor: "#e8f5e9",
                 borderRadius: "4px",
                 fontSize: "0.85rem",
                 color: "#2e7d32",

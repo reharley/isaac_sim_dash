@@ -117,7 +117,6 @@ export function BatteryStatus({ ros, connectionStatus }: BatteryStatusProps) {
               style={{
                 width: "100%",
                 height: "24px",
-                backgroundColor: "#e0e0e0",
                 borderRadius: "12px",
                 overflow: "hidden",
               }}
@@ -126,7 +125,6 @@ export function BatteryStatus({ ros, connectionStatus }: BatteryStatusProps) {
                 style={{
                   width: `${batteryData.percentage}%`,
                   height: "100%",
-                  backgroundColor: getStatusColor(batteryData.percentage),
                   transition: "width 0.3s ease",
                   display: "flex",
                   alignItems: "center",
@@ -213,7 +211,6 @@ export function BatteryStatus({ ros, connectionStatus }: BatteryStatusProps) {
               style={{
                 marginTop: "1rem",
                 padding: "0.5rem",
-                backgroundColor: "#e8f5e9",
                 borderRadius: "4px",
                 fontSize: "0.85rem",
                 color: "#2e7d32",

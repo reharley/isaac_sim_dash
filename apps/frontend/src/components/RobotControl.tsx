@@ -83,7 +83,6 @@ export function RobotControl({ ros, connectionStatus }: RobotControlProps) {
         <div
           style={{
             padding: "1rem",
-            backgroundColor: "#fff3cd",
             borderRadius: "4px",
             marginBottom: "1rem",
             color: "#856404",
@@ -244,7 +243,6 @@ export function RobotControl({ ros, connectionStatus }: RobotControlProps) {
         style={{
           marginTop: "1rem",
           padding: "0.75rem",
-          backgroundColor: "#f5f5f5",
           borderRadius: "4px",
           fontSize: "0.9rem",
         }}

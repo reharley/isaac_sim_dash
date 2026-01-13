@@ -220,7 +220,6 @@ export function DifferentialDriveStatus({
           <div
             style={{
               padding: "0.75rem",
-              backgroundColor: "#f0f0f0",
               borderRadius: "4px",
               fontSize: "0.85rem",
               color: "#666",
@@ -234,7 +233,6 @@ export function DifferentialDriveStatus({
               style={{
                 marginTop: "1rem",
                 padding: "0.5rem",
-                backgroundColor: "#e8f5e9",
                 borderRadius: "4px",
                 fontSize: "0.85rem",
                 color: "#2e7d32",

@@ -217,7 +217,6 @@ export function NovaCarterCamera({
             padding: "2rem",
             textAlign: "center",
             color: "#666",
-            backgroundColor: "#f5f5f5",
             borderRadius: "4px",
           }}
         >
@@ -233,7 +232,6 @@ export function NovaCarterCamera({
         style={{
           marginTop: "1rem",
           padding: "0.75rem",
-          backgroundColor: "#f9f9f9",
           border: "1px solid #ddd",
           borderRadius: "4px",
           fontSize: "0.85rem",
