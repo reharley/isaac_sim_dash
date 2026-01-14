@@ -157,35 +157,4 @@ pnpm build
 pnpm start
 ```
 
-Serve frontend static files from Express in production:
-
-```typescript
-app.use(express.static('../frontend/dist'));
-```
-
-## 📦 Dependencies
-
-### Frontend
-
-- **react** - UI library
-- **roslibjs** - ROS 2 WebSocket client
-- **@mui/material** - Material Design components (optional)
-- **recharts** - Charting library (optional)
-- **react-joystick-component** - Virtual joystick (optional)
-- **vite** - Build tool
-- **@vitejs/plugin-react** - React plugin for Vite
-
-### Backend
-
-- **express** - Web framework
-- **cors** - CORS middleware
-- **tsx** - TypeScript runner (dev)
-
-### Shared
-
-- **typescript** - Type checking
-
----
-
-**Made for Isaac Sim ROS 2 integration with ❤️**
 
