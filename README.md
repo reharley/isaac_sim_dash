@@ -11,37 +11,6 @@ A modern monorepo-based web dashboard for real-time visualization and control of
 | **ROS Bridge** | rosbridge_suite        | 9090 (WS) | Exposes ROS 2 topics to browser via WebSocket       |
 | **Isaac Sim**  | ROS 2 Bridge Extension | -         | Publishes simulation data to ROS 2 topics           |
 
-## 🏗️ Project Structure
-
-```
-isaac-sim-web-dashboard/
-├── apps/
-│   ├── frontend/                    # Vite React dashboard
-│   │   ├── src/
-│   │   │   ├── App.tsx            # Main component with ROS connection
-│   │   │   ├── main.tsx           # Entry point
-│   │   │   └── *.css              # Styling
-│   │   ├── index.html
-│   │   ├── package.json
-│   │   ├── vite.config.ts
-│   │   └── tsconfig.json
-│   └── backend/                     # Express server
-│       ├── src/
-│       │   └── server.ts           # Express app
-│       ├── package.json
-│       └── tsconfig.json
-├── packages/
-│   └── shared/                      # Shared types & utils
-│       ├── src/
-│       │   └── index.ts            # ROS message types
-│       ├── package.json
-│       └── tsconfig.json
-├── pnpm-workspace.yaml              # pnpm workspace config
-├── package.json                     # Root scripts
-├── tsconfig.json                    # Root TS config
-└── README.md
-```
-
 ## 🚀 Quick Start
 
 ### Prerequisites
@@ -90,23 +59,6 @@ ros2 launch rosbridge_server rosbridge_websocket_launch.xml
 ```
 
 rosbridge will be available at **ws://localhost:9090**
-
-If Isaac Sim is on a different machine, use its IP:
-
-```bash
-# In app browser or vite.config.ts:
-ws://YOUR_ISAAC_SIM_IP:9090
-```
-
-### 5. Start Isaac Sim Simulation
-
-- Open Isaac Sim
-- Load or create your scene
-- Enable **ROS 2 Bridge** extension
-- Click **Play** to start the simulation
-- Topics like `/joint_states`, `/odom`, `/clock` will be published
-
-### Run Everything Together
 
 ```bash
 pnpm dev
@@ -233,96 +185,7 @@ app.use(express.static('../frontend/dist'));
 
 - **typescript** - Type checking
 
-## 🐛 Troubleshooting
-
-### Dashboard shows "Disconnected"
-
-1. **Check rosbridge is running:**
-
-   ```bash
-   ros2 topic list
-   ```
-
-   If empty, rosbridge isn't running.
-
-2. **Verify WebSocket URL:**
-   Check browser console (F12) for connection errors.
-   If Isaac Sim is remote: `ws://YOUR_IP:9090`
-
-3. **Firewall issues:**
-   Ensure port 9090 (TCP/UDP) is open between your machine and Isaac Sim host.
-
-### No joint states appearing
-
-1. Check Isaac Sim is in **PLAY** mode
-2. Verify robot has joints and ROS 2 Bridge is enabled
-3. In browser console, check for topic subscription errors
-
-### TypeScript errors
-
-```bash
-pnpm type-check
-```
-
-### Port conflicts
-
-- Frontend (5173): `vite --port 5174`
-- Backend (3001): Change `PORT` in `apps/backend/src/server.ts`
-- rosbridge (9090): Change in `rosbridge_websocket_launch.xml`
-
-## 🚀 Next Steps / Ideas
-
-1. **Add 3D Visualization:**
-
-   - Integrate `react-three-fiber` + `ros3djs`
-   - Display robot model from URDF
-
-2. **Real-time Charts:**
-
-   - Use `recharts` for joint position/velocity plots
-   - Add IMU acceleration graphs
-
-3. **Joystick Teleop:**
-
-   - Use `react-joystick-component`
-   - Send `Twist` commands to `/cmd_vel`
-
-4. **Multiple Robots:**
-
-   - Add topic filtering UI
-   - Support multiple namespaced robots
-
-5. **State Management:**
-
-   - Use **Zustand** or **Jotai** for complex state
-   - Persist dashboard settings (theme, subscribed topics)
-
-6. **ROS Service Calls:**
-
-   - Expose ROS services (e.g., grasp, reset)
-   - Add service UI builders
-
-7. **Turborepo Integration:**
-
-   - Add `turbo.json` for optimized builds
-   - Enable incremental builds & caching
-
-8. **Docker Deployment:**
-   - Containerize frontend + backend
-   - Easy deployment on any machine with ROS 2
-
-## 📚 Resources
-
-- [roslibjs Docs](http://wiki.ros.org/roslibjs)
-- [rosbridge_suite](http://wiki.ros.org/rosbridge_suite)
-- [Isaac Sim ROS 2 Bridge](https://docs.omniverse.nvidia.com/app_isaacsim/app_isaacsim/ext_omni_isaac_ros_bridge.html)
-- [Vite Docs](https://vitejs.dev/)
-- [React Docs](https://react.dev/)
-
-## 📄 License
-
-MIT
-
 ---
 
 **Made for Isaac Sim ROS 2 integration with ❤️**
+
